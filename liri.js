@@ -45,6 +45,7 @@ function getMyTweets() {
 function songInfo() {
 var spotify = new Spotify(keys.spotify);
 spotify.search({ type: 'track', query: input}, function(err, data) {
+    // i need the error to default to "The Sign by Ace of Base"
     if (err) {
       return console.log('Error occurred: ' + err);
     }
@@ -70,7 +71,7 @@ request('http://www.omdbapi.com/?t=' + input + '&y=&plot=short&apikey=trilogy', 
     console.log("The movie's plot: " + JSON.parse(body).Plot);
     console.log("The Actor's in the movie are: " + JSON.parse(body).Actors);
   }   
-  
+  // here i need to error to default to Mr. Noboby
 });
 };
 
@@ -83,9 +84,10 @@ function whatItSays() {
     if (error) {
       return console.log(error);
     }
-  
     // We will then print the contents of data
     console.log("node liri " + data);
+    
+    // I need to push this "data" to run in node app
   
   });
 }
