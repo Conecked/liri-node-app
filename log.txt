@@ -1,0 +1,68 @@
+The movie's title is: Toy Story
+
+The year of the movie's release: 22 Nov 1995
+
+The movie's rating is: 8.3
+
+The movie's Rotten Tomatoes rating is: 100%
+
+The movie's was produced in: USA
+
+The movie is avaialbe in the following languages: English
+
+The movie's plot: A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.
+
+The Actor's in the movie are: Tom Hanks, Tim Allen, Don Rickles, Jim Varney
+------------------------------------------------------------
+
+The movie's title is: Toy Story
+
+The year of the movie's release: 22 Nov 1995
+
+The movie's rating is: 8.3
+
+The movie's Rotten Tomatoes rating is: 100%
+
+The movie's was produced in: USA
+
+The movie is avaialbe in the following languages: English
+
+The movie's plot: A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.
+
+The Actor's in the movie are: Tom Hanks, Tim Allen, Don Rickles, Jim Varney
+------------------------------------------------------------
+
+The movie's title is: Legends of the Fall
+
+The year of the movie's release: 13 Jan 1995
+
+The movie's rating is: 7.5
+
+The movie's Rotten Tomatoes rating is: 45/100
+
+The movie's was produced in: USA
+
+The movie is avaialbe in the following languages: English, Cornish
+
+The movie's plot: In the early 1900s, three brothers and their father living in the remote wilderness of Montana are affected by betrayal, history, love, nature, and war.
+
+The Actor's in the movie are: Brad Pitt, Anthony Hopkins, Aidan Quinn, Julia Ormond
+------------------------------------------------------------
+
+Title: Legends of the Fall
+
+Release Year: 13 Jan 1995
+
+Rating: 7.5
+
+Rotten Tomatoes rating: 45/100
+
+Country Produced: USA
+
+Available in: English, Cornish
+
+Plot: In the early 1900s, three brothers and their father living in the remote wilderness of Montana are affected by betrayal, history, love, nature, and war.
+
+Actors: Brad Pitt, Anthony Hopkins, Aidan Quinn, Julia Ormond
+------------------------------------------------------------
+

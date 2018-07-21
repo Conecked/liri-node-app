@@ -10,7 +10,7 @@ var Spotify = require('node-spotify-api');
 
 // First get the client arguments
 var command = process.argv[2];
-var input = process.argv[3];
+var input = process.argv.splice(3).join(" ");
 
 // Decide action
 switch (command) {
@@ -46,9 +46,8 @@ function songInfo() {
 var spotify = new Spotify(keys.spotify);
 spotify.search({ type: 'track', query: input}, function(err, data) {
     // i need the error to default to "The Sign by Ace of Base"
-    if (err) {
-      return console.log('Error occurred: ' + err);
-    }
+    if (err) return console.log('Error occurred: ' + err);
+    
    
   console.log("Artists' Name: " + data.tracks.items[0].album.artists[0].name);
   console.log("Song Name: " + data.tracks.items[0].name); 
@@ -60,19 +59,27 @@ spotify.search({ type: 'track', query: input}, function(err, data) {
 
 function movieInfo() {
 request('http://www.omdbapi.com/?t=' + input + '&y=&plot=short&apikey=trilogy', function (error, response, body) {
-   
- if (!error && response.statusCode === 200) {
-    console.log("The movie's title is: " + JSON.parse(body).Title);
-    console.log("The year of the movie's release: " + JSON.parse(body).Released);
-    console.log("The movie's rating is: " + JSON.parse(body).imdbRating);
-    console.log("The movie's Rotten Tomatoes rating is: " + JSON.parse(body).Ratings[1].Value);
-    console.log("The movie's was produced in: " + JSON.parse(body).Country);
-    console.log("The movie is avaialbe in the following languages: " + JSON.parse(body).Language);
-    console.log("The movie's plot: " + JSON.parse(body).Plot);
-    console.log("The Actor's in the movie are: " + JSON.parse(body).Actors);
-  }   
+   if (error) return console.log(error);
+
+   var jsonData = JSON.parse(body)
+
+    var movieData = [
+    "Movie Title: " + jsonData.Title,
+    "Release Year: " + jsonData.Released,
+    "Rating: " + jsonData.imdbRating,
+    "Rotten Tomatoes rating: " + jsonData.Ratings[1].Value,
+    "Country Produced: " + jsonData.Country,
+    "Available in: " + jsonData.Language,
+    "Plot: " + jsonData.Plot,
+    "Actors: " + jsonData.Actors,
+    ].join("\n\n");
+    writeToLogs(movieData, function(err) {
+    if (err) throw err;
+    console.log(movieData);      
+  })
   // here i need to error to default to Mr. Noboby
 });
+
 };
 
 
@@ -91,4 +98,10 @@ function whatItSays() {
   
   });
 }
+
+function writeToLogs(text, callback) {
+    const divider = "\n------------------------------------------------------------\n\n";
+    // Append showData and the divider to log.txt, print showData to the console
+    fs.appendFile("log.txt", text + divider, callback);
+  }
 
